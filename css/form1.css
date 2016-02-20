@@ -1,0 +1,78 @@
+body, html{padding: 0;margin:0;height: 100%; font-family: sans-serif; font-size: 20px}
+
+/*RESETEO GENERAL*/
+*{margin: 0;padding: 0}
+
+/*PARA CONTROLAR LA SEPARACION DE LAS CAJAS Y QUE LOS ELEMENTOS NO SE PASEN DE SU % */
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+
+/*CONTENEDOR PRINCIPAL*/
+.main{height: 100%; text-align: center; background-size: cover;background-image: url('../imgs/fondo.png')}
+
+/*HELPER PARA CENTRAR*/
+.helper{height: 100%;vertical-align: middle;display: inline-block;}
+
+/*FORMULARIO CENTRAL*/
+.form{vertical-align: middle;display: inline-block;background-color: #FFFFFF;max-width: 384px;-webkit-border-radius: .5em;-moz-border-radius: .5em;border-radius: .5em;text-align: left;position: relative;
+    -webkit-box-shadow: 0px 0px 11px 2px rgba(125,125,125,1);
+    -moz-box-shadow: 0px 0px 11px 2px rgba(125,125,125,1);
+    box-shadow: 0px 0px 11px 2px rgba(125,125,125,1);
+}
+
+/*CABECERA DE LOGIN*/
+
+.form .head{display: block;margin-top: 10%;border-left: .2em solid #FF5722;padding-left: 2em}
+.form .head span h2{color: #FF5722}
+
+/*LOGIN DE FORMULARIO*/
+.form .body form input:focus{outline: none;border-bottom: .05em solid #FF5722;}
+.form .body form input:last-of-type:focus~button{border: .05em solid #FF5722; color: #FF5722;}
+.form .body button:hover{border: .05em solid #FF5722; color: #FF5722;}
+.form .body button:active{background-color: #FF5722;color : #fff;}
+.form .body span{text-align: center;}
+.form .body span p {color: #CECECE;font-size: .8em}
+.form .body span p a{color :#FF5722; text-decoration: none}
+.form .body span p a:focus{outline: none;}
+
+/*FLOAT BUTTON*/
+.form .float-button{position: absolute;right: -2em;top: 2em;background-color: #FF5722;width: 4em;height: 4em;text-align: center;color: #fff;border-radius: 4em;
+    -webkit-box-shadow: -2px 2px 9px -1px rgb(181, 181, 181);
+    -moz-box-shadow: -2px 2px 9px -1px rgb(181, 181, 181);
+    box-shadow: -2px 2px 9px -1px rgb(181, 181, 181);}
+.form .float-button.active{right: 0;top: 0;width: 100%;height: 100%;vertical-align: middle;display: inline-block;background-color: #FF5722;max-width: 384px;-webkit-border-radius: .5em;-moz-border-radius: .5em;border-radius: .5em;text-align: left;position: absolute;}
+.form .float-button .cross h2{vertical-align: middle;display: inline-block;margin-top: 25%;cursor: pointer;}
+.form .float-button.active .cross h2{position: absolute;top: 0;right: 10px;margin-top: 0;
+    -ms-transform: rotate(43deg); /* IE 9 */
+    -webkit-transform: rotate(43deg); /* Chrome, Safari, Opera */
+    transform: rotate(43deg);}
+
+/*CABECERA DE REGISTRO*/
+.form .head-registro{display: none;}
+.form .head-registro.active{display: inline-block;margin-top: 10%;border-left: .2em solid #fff;padding-left: 2em}
+
+/*REGISTRO DE FORMULARIO*/
+.form .body-registro{display: none;}
+.form .body-registro.active{display: inline-block;}
+.form .body-registro form input{color: #fff}
+.form .body-registro form input:focus{outline: none;border-bottom: .05em solid #fff;}
+.form .body-registro form input:last-of-type:focus~button{border: .05em solid #fff; color: #fff;}
+.form .body-registro button:hover{border: .05em solid #fff; color: #fff;}
+
+/*TRANSITIONS Y ESTYLES GENERALES*/
+.form .body, .form .body-registro{padding: 2em;}
+.form form input{width: 100%;border:none; border-bottom: .05em solid #CECECE; padding: .5em 0 .5em 0;margin-bottom: 30px;font-size: .8em;background-color: transparent;}
+.form form input, .form button, .form .float-button,.form .float-button .cross h2 {
+    -webkit-transition: all 200ms cubic-bezier(0.755, 0.050, 0.855, 0.060); 
+    -moz-transition: all 200ms cubic-bezier(0.755, 0.050, 0.855, 0.060); 
+    -o-transition: all 200ms cubic-bezier(0.755, 0.050, 0.855, 0.060); 
+    transition: all 200ms cubic-bezier(0.755, 0.050, 0.855, 0.060);
+}
+.form form input:focus::-webkit-input-placeholder{position: relative;top: -1em;}
+.form button{display: block;margin: 0 auto;border: .05em solid #CECECE;background-color: transparent;color: #CECECE;width: 50%;padding: 10px;margin-bottom: 30px;cursor: pointer;font-size: .8em;}
+.form button:focus{outline: none;}

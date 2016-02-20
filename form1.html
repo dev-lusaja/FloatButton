@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="css/form1.css">
+</head>
+<body>
+	<div class="main">
+		<div class="helper"></div><!-- 
+		 -->
+		<div class="form">
+			<div class="float-button">
+				<span class="cross"><h2>+</h2></span>
+				<div class="head-registro">
+					<span><h2>Register</h2></span>	
+				</div>
+				<div class="body-registro">
+					<form action="registro.php">
+						<label for="user"></label>
+						<input type="text" name="user" placeholder="Usuername" required>
+						<label for="pass"></label>
+						<input type="password" name="pass" placeholder="Password" required>
+						<label for="pass"></label>
+						<input type="password" name="pass" placeholder="Repeat password" required>
+						<button>Next</button>
+					</form>
+				</div>
+			</div>	
+			<div class="head">
+				<span><h2>Login</h2></span>
+			</div>
+			<div class="body">
+			 <form action="login.php">
+				<label for="user"></label>
+				<input type="text" name="user" placeholder="Username" required>
+				<label for="pass"></label>
+				<input type="password" name="pass" placeholder="Password" required>
+				<button>Login</button>
+				<span><p><a href="#">Forgot your password?</a></p></span>
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.form .float-button .cross').on('click', function () {
+			$('.float-button').toggleClass('active')
+			$('.head-registro').toggleClass('active')
+			$('.body-registro').toggleClass('active')
+		})
+	})
+</script>
+</html>
